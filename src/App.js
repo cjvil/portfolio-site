@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './NavBar';
 
 class App extends Component {
   render() {
+    const pages = ['item1', 'item2', 'item3', 'item4'];
+
     return (
-      <div className="App">
+      <div className="app">
+        <NavBar pages={pages}/>
       </div>
     );
   }
