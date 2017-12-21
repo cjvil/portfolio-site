@@ -1,23 +1,33 @@
 import React, { Component } from 'react';
-import TitleBlock from './TitleBlock';
 import NavBarItem from './NavBarItem';
+import TitleBlock from './TitleBlock';
 
 class NavBar extends Component {
   render(props) {
     const navBarStyle = {
       // backgroundColor: '#E91E63',
       height: '10%',
-      padding: 30,
+      width: '100%',
+      padding: 40,
       display: 'flex',
-      justifyContent: 'space-around',
+      justifyContent: 'flex-start',
       alignItems: 'center',
       // TODO: add vendor prefixes (need to account for duplicate keys)
     };
 
+    const navItemsStyle = {
+      width: '60%',
+      display: 'flex',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+    }
+
     return (
       <div style={navBarStyle}>
         <TitleBlock />
-        {this.props.pages.map((page) => <NavBarItem page={page} />)}
+        <div style={navItemsStyle}>
+          {this.props.pages.map((page) => <NavBarItem page={page} />)}
+        </div>
       </div>
     )
   }

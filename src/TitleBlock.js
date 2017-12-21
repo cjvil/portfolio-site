@@ -1,6 +1,11 @@
 import React from 'react';
 
 const TitleBlock = function() {
+  const blockStyle = {
+    width: '25%',
+    paddingLeft: 40
+  }
+  
   const titleStyle = {
     fontFamily: 'Helvetica',
     fontSize: '110%',
@@ -15,7 +20,7 @@ const TitleBlock = function() {
   }
 
   return (
-    <div>
+    <div style={blockStyle}>
       <div style={titleStyle}>Christie<br />Villanueva</div>
       <div style={subtitleStyle}>software engineer</div>
     </div>
